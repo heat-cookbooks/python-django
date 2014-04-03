@@ -17,13 +17,6 @@
 # limitations under the License.
 #
 
-unless node['vagrant']
-    databag = Chef::EncryptedDataBagItem.load(node['deployment']['id'], node['deployment']['app_id'])
-    node.set['django']['password'] = databag['django']['password']
-    node.set['django']['django_admin_pass'] = databag['django']['django_admin_pass']
-    node.set['django']['database_password'] = databag['django']['database_password']
-end
-
 include_recipe "apt" if platform_family?("debian")
 include_recipe "apache2::default"
 include_recipe "apache2::mod_wsgi"
