@@ -21,6 +21,7 @@ include_recipe "apt" if platform_family?("debian")
 include_recipe "apache2::default"
 include_recipe "apache2::mod_wsgi"
 include_recipe "mysql::client"
+include_recipe "python"
 
 venv = node['django']['virtualenv']
 project_name = node['django']['project_name']
