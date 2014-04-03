@@ -169,7 +169,7 @@ directory "/srv/#{venv}/#{project_name}/#{project_name}/templates" do
     group dev_user
     mode 02775
     action :create
-    only_if {node['deployment']['app_id'] == 'django_cms'}
+    only_if {node['django']['app_name'] == 'django_cms'}
 end
 
 cookbook_file "/srv/#{venv}/#{project_name}/#{project_name}/templates/base.html" do
@@ -177,7 +177,7 @@ cookbook_file "/srv/#{venv}/#{project_name}/#{project_name}/templates/base.html"
     mode 0644
     owner dev_user
     group dev_user
-    only_if {node['deployment']['app_id'] == 'django_cms'}
+    only_if {node['django']['app_name'] == 'django_cms'}
 end
 
 cookbook_file "/srv/#{venv}/#{project_name}/#{project_name}/templates/template_1.html" do
@@ -185,5 +185,5 @@ cookbook_file "/srv/#{venv}/#{project_name}/#{project_name}/templates/template_1
     mode 0644
     owner dev_user
     group dev_user
-    only_if {node['deployment']['app_id'] == 'django_cms'}
+    only_if {node['django']['app_name'] == 'django_cms'}
 end
