@@ -154,7 +154,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     <% end -%>
 )
 
-<% if node['deployment']['app_id'] == 'django_cms' -%>
+<% if node['django']['app_name'] == 'django_cms' -%>
 CMS_TEMPLATES = (
     ('base.html', 'Base'),
     ('template_1.html', 'Template One')
