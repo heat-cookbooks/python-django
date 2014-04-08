@@ -17,6 +17,16 @@ Vagrant.configure("2") do |config|
     chef.log_level = :debug
     chef.json = {
       'django' => {
+      'database_host' => 'SOMETHING.rackspaceclouddb.com',
+      'database_name' => 'mydb',
+      'database_user' => 'mydbuser',
+      'database_password' => 'p@ssword',
+      'app_name' => 'django',
+      'project_name' => 'myproject',
+      'virtualenv' => 'virtualenv',
+      'username' => 'pydev',
+      'django_admin_user' => 'djangouser',
+      'django_admin_email' => 'user@domain.com'
       }
     }
 

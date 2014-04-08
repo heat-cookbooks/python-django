@@ -1,4 +1,5 @@
 default['django']['username'] = ""
+default['django']['password'] = ""
 default['django']['virtualenv'] = ""
 default['django']['project_name'] = ""
 default['django']['app_name'] = ""
