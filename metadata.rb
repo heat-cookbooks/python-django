@@ -6,6 +6,8 @@ description      'Installs/Configures python-django'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
-%w{ apt mysql build-essential python apache2 }.each do |cb|
+%w{ apt build-essential python apache2 }.each do |cb|
 	depends cb
 end
+
+depends 'mysql', '5.3.6'
